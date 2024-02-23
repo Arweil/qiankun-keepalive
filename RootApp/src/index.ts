@@ -19,6 +19,12 @@ function startMicroApp() {
       container: '#container',
       activeRule: '/app2',
     },
+    {
+      name: 'app3',
+      entry: '//localhost:5173',
+      container: '#container',
+      activeRule: '/app3',
+    },
   ]);
 
   const action = initGlobalState({});

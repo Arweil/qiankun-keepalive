@@ -24,6 +24,12 @@ export default class AppStore {
       container: '#container-app2',
       activeRule: '/app2',
     },
+    {
+      name: 'app3',
+      entry: '//localhost:5173',
+      container: '#container-app3',
+      activeRule: '/app3',
+    },
   ];
 
   cachePageKeys: Record<TypeAppName, string[]> = {
@@ -48,11 +54,11 @@ export default class AppStore {
 
     const pageKey = `${pathname}${search}`.replace(`/${appName}`, '');
 
-    if (!this.cachePageKeys[appName].some((itm) => itm === pageKey)) {
+    if (!(this.cachePageKeys[appName] || []).some((itm) => itm === pageKey)) {
       // 缓存激活的应用于应用下页面的key
       this.cachePageKeys = {
         ...this.cachePageKeys,
-        [appName]: [...this.cachePageKeys[appName], pageKey],
+        [appName]: [...(this.cachePageKeys[appName] || []), pageKey],
       };
     }
 

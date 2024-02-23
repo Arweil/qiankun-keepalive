@@ -170,6 +170,42 @@ export class UserStore {
               pId: 6,
               path: '/app2/Demo/DemoMulStore',
             },
+
+            {
+              code: '71001',
+              id: 71001,
+              nameZn: 'App3',
+              path: '/app3',
+              pId: 0,
+            },
+            {
+              code: '71002',
+              id: 71002,
+              nameZn: '子首页',
+              path: '/app3/home',
+              pId: 71001,
+            },
+            {
+              code: '75002',
+              id: 75002,
+              nameZn: '子菜单',
+              path: '/app3/child/page',
+              pId: 75001,
+            },
+            {
+              code: '75001',
+              id: 75001,
+              nameZn: '父菜单',
+              path: '/app3/child',
+              pId: 0,
+            },
+            {
+              code: '73001',
+              id: 73001,
+              nameZn: '没keepAlive菜单',
+              path: '/app3/nokeep',
+              pId: 75001,
+            },
           ],
         }),
       ]);

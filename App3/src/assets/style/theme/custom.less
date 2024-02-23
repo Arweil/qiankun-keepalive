@@ -1,0 +1,36 @@
+// 优化 TODO: 不直接引入整个less，使用按需引入方式构建，需要vite插件支持
+@import 'ant-design-vue/dist/antd.less'; // 引入官方提供的 less 样式入口文件。这是整个样式文件
+@import '../variable.less';
+
+// 样式变量 https://github.com/vueComponent/ant-design-vue/blob/main/components/style/themes/default.less
+@primary-color: @brand-color;
+// @layout-header-background: @brand-color;
+
+// 基于UI规范的样式调整
+.ant-btn + .ant-btn {
+  margin-left: 16px;
+  &.default {
+    margin-left: initial;
+  }
+}
+
+.ant-drawer {
+  .ant-drawer-header {
+    .ant-drawer-header-title {
+      flex-direction: row-reverse;
+      .ant-drawer-close {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  color: #666!important;
+}
+.ant-input[disabled]{
+  color:#666
+}
+.ant-btn-primary[disabled], .ant-btn-primary[disabled]:hover, .ant-btn-primary[disabled]:focus, .ant-btn-primary[disabled]:active{
+  color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.3);
+}

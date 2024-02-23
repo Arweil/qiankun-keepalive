@@ -35,8 +35,9 @@ export default observer(
             type="link"
             icon={<LogoutOutlined />}
             onClick={async () => {
-              await UserStore.logout();
-              history.push('/login');
+              // await UserStore.logout();
+              // history.push('/login');
+              console.log('退出')
             }}
           >
             退出登录

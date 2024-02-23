@@ -1,0 +1,32 @@
+.site-info {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+
+  img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.site-name {
+  margin-left: 4px;
+  margin-right: 2px;
+  color: #323232;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: AlimamaShuHeiTi-Bold, AlimamaShuHeiTi;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.nolayout {
+  :global(.ant-layout-sider) {
+    display: none;
+  }
+
+  :global(.ant-layout-header) {
+    display: none;
+  }
+}
